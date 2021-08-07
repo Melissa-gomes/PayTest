@@ -1,7 +1,7 @@
 const mongoClient = require('mongodb').MongoClient;
 const MONGO_DB_URL = 'mongodb://127.0.0.1:27017/Bank';
 
-const DB_NAME = 'Allugator';
+const DB_NAME = 'Bank';
 const connect = async () => mongoClient.connect(MONGO_DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
