@@ -1,5 +1,5 @@
 const { ObjectId } = require('mongodb');
-const connect = require('../Service/Connect/conn');
+const connect = require('../Connect/conn');
 const approvedTransaction = require('../FetchAPI/transaction');
 const error = require('../error/index');
 

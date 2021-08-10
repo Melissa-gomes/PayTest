@@ -1,7 +1,9 @@
 const mongoClient = require('mongodb').MongoClient;
-const MONGO_DB_URL = 'mongodb://127.0.0.1:27017/Bank';
+require('dotenv').config();
 
-const DB_NAME = 'Bank';
+const MONGO_DB_URL = process.env.MONGO_DB_URL;
+
+const DB_NAME = process.env.DB_NAME;
 const connect = async () => mongoClient.connect(MONGO_DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true

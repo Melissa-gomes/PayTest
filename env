@@ -1,0 +1,3 @@
+ME_CONFIG_MONGODB_AUTH_DATABASE=Bank
+MONGO_DB_URL=mongodb://mongo/Bank
+DB_NAME=Bank
