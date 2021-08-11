@@ -2,23 +2,19 @@ version: "3.9"
 
 services: 
   mongo:
-    build: 
-      context: ./mongo
-      dockerfile: Dockerfile
+    image: mongo:latest
     container_name: containerMongo
-    command: mongorestore ./dump
     ports:
       - 27017:27017
     volumes: 
-      - mongo:/data/db
+      - data:/data/db
+      - ./dump:/dump
     restart: always
     env_file: 
       - env
 
   paytest:
-    build:
-      context: ./paytest
-      dockerfile: Dockerfile
+    build: .
     container_name: containerPayTest
     ports: 
       - 3000:3000
@@ -30,4 +26,4 @@ services:
       - env
 
 volumes: 
-  mongo: 
+  data: 
